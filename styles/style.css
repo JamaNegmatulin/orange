@@ -1,22 +1,28 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .container{
     margin: 0 auto;
-    width: 1110px;
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
 }
 .row{
     display: flex;
+    flex-wrap: wrap;
 }
 header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 ul{
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 .logo a{
     display: flex;
@@ -152,6 +158,7 @@ footer{
 }
 footer .row{
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .footer-left p:nth-child(1){
     margin-bottom: 25px;
@@ -197,4 +204,67 @@ footer .row{
     font-weight: normal;
     font-size: 20px;
     text-decoration: none;
+}
+
+@media(max-width:1100px){
+    .top{
+        width: 70%;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+    .card{
+        margin-bottom: 40px;
+    }
+}
+@media(max-width:1002px){
+    .right{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .right-item{
+        width: 50%;
+    }
+    .right h3{
+        text-align: center;
+        width: 100%;
+    }
+    .left{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .left h3{
+        text-align: center;
+    }
+    footer .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-left{
+        text-align:  center;
+    }
+    .footer-right{
+       text-align: center;
+        margin-top: 30px;
+    }
+}
+@media(max-width:764px){
+    header nav .container{
+        justify-content: center;
+    }
+    header nav ul{
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+@media(max-width:450px){
+    .right-item{
+        width: 100%;
+    }
+    header nav ul a{
+        margin: 0 ;
+    }
+    header nav ul{
+        justify-content: space-around;
+    }
 }
